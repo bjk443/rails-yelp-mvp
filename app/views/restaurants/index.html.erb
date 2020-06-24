@@ -1,0 +1,10 @@
+<H1> Restaurants </H1>
+<%# link_to xxxx prefix edit this!! %>
+<% @restaurants.each do |restaurant| %>
+<h5><%= link_to restaurant.name, restaurant_path(restaurant.id) %> 
+<%= restaurant.address %>
+<%= restaurant.category%>
+</h5>
+
+<%= link_to "Delete", restaurant_path(restaurant), method: :delete %>
+<% end %>
